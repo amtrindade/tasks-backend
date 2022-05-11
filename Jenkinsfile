@@ -7,13 +7,13 @@ pipeline {
                 sh 'echo Begin'
             }
         }
-        stage('Meio'){
+        stage('Midle'){
             steps {
                 sh 'echo Midle'
                 sh 'echo Midle again'
             }
         }
-        stage('Fim'){
+        stage('End'){
             steps {
                 sleep(5)
                 sh 'echo End'
