@@ -52,7 +52,14 @@ pipeline {
                 }
             }
         }
-
+        stage('Functional Tests FrontEnd'){
+            steps{
+                dir('functional-test'){
+                    git credentialsId: 'github_login', url: "https://github.com/amtrindade/tasks-functional-tests"
+                    sh 'mvn test'
+                }
+            }
+        }
     }
 }
 
