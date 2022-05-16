@@ -1,17 +1,10 @@
 pipeline {
     agent any
-
     options {
         ansiColor('xterm')
     }
 
     stages {
-        stage('Build test xterm') {
-            steps {
-                echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
-            }
-        }
-
         stage('Build BackEnd'){
             steps {
                 sh 'mvn clean package -DskipTests=true'
