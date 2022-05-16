@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('Build BackEnd'){
             steps {
+                echo '\033[34mStart\033[0m \033[33mbuild\033[0m \033[35mBackend!\033[0m'
                 sh 'mvn clean package -DskipTests=true'
             }
         }
